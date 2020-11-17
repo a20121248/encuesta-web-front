@@ -1,0 +1,9 @@
+{
+  "env": {
+    "name": "#{envName}"
+  },
+  "urlServer": {
+    "api": "/api/",
+    "oauth": "/oauth/"
+  }
+}

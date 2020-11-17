@@ -1,0 +1,9 @@
+{
+  "env": {
+    "name": "DEV"
+  },
+  "urlServer": {
+    "api": "http://localhost:8080/api/",
+    "oauth": "http://localhost:8080/oauth/"
+  }
+}

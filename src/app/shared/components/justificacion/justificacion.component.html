@@ -1,0 +1,30 @@
+<form *ngIf="lstJustificaciones" [formGroup]="justificacionGroup">
+  <mat-form-field class="mt-4">
+    <mat-select placeholder="Justificación" formControlName="justificacionControl" required>
+      <mat-option *ngFor="let item of lstJustificaciones" [value]="item" >
+        <span>{{ item.nombre }}</span>
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="justificacionControl.invalid && justificacionControl.touched" >
+      Escoger opción
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="justificacionControl && justificacionControl.value.nombre=='OTROS'" class="mt-2">
+    <input matInput maxlength="250" placeholder="Detalle de la justificación" formControlName="detalleControl" required>
+    <mat-error *ngIf="detalleControl.invalid && detalleControl.touched" >
+      Escribir el detalle de la justificación.
+    </mat-error>
+  </mat-form-field>
+  <small id="emailHelp" class="form-text text-muted">
+    Enviar archivo asociado con el sustento a <a href="mailto:encuestas_planeamiento@pacifico.com.pe">encuestas_planeamiento@pacifico.com.pe</a>
+  </small>
+
+  <mat-form-field class="mt-5">
+    <textarea matInput placeholder="Observaciones" cdkTextareaAutosize maxlength="250"
+      cdkAutosizeMinRows="8" cdkAutosizeMaxRows="14"  formControlName="observacionesControl"></textarea>
+      <mat-error *ngIf="observacionesControl.invalid && observacionesControl.touched" >
+        Escribir observaciones de la justificación.
+      </mat-error>
+  </mat-form-field>
+</form>

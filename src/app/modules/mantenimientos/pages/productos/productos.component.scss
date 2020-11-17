@@ -1,0 +1,36 @@
+tr.mat-row {
+  cursor: pointer;
+}
+
+.mat-column-codigo {
+  width: 8%;
+  text-align: center;
+}
+
+.mat-column-nombre {
+  width: 26%;
+}
+
+.mat-column-lineaCodigo {
+  width: 8%;
+  text-align: center;
+}
+
+.mat-column-lineaNombre {
+  width: 25%;
+}
+
+.mat-column-fechaCreacion {
+  width: 11%;
+  text-align: center;
+}
+
+.mat-column-fechaActualizacion {
+  width: 11%;
+  text-align: center;
+}
+
+.mat-column-fechaEliminacion {
+  width: 11%;
+  text-align: center;
+}
